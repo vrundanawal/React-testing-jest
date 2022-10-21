@@ -15,12 +15,15 @@ function App() {
       >
         Change to {newButtonColor}
       </button>
+
       <input
         type="checkbox"
         id="disable-button-checkbox"
         defaultChecked={disabled}
         onChange={(e) => setDisabled(e.target.checked)}
       />
+      {/* //finding the checkbox with label */}
+      <label htmlFor="disable-button-checkbox">Disable button</label>
     </div>
   );
 }
