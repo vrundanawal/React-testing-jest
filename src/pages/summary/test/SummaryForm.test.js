@@ -34,14 +34,14 @@ test("popover responds to hover", async () => {
 
   // popover starts out hidden
   const nullPopover = screen.queryByText(
-    /no ice creame will actually be delivered/i
+    /no ice cream will actually be delivered/i
   );
   expect(nullPopover).not.toBeInTheDocument();
 
   // popover appears on mouseover of checkbox label
   const termsAndConditions = screen.getByText(/terms and conditions/i);
   await user.hover(termsAndConditions);
-  const popover = screen.getByText(/no ice creame will actually be delivered/i);
+  const popover = screen.getByText(/no ice cream will actually be delivered/i);
   expect(popover).toBeInTheDocument();
 
   // popover disappears when we mouse out
